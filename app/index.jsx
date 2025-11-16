@@ -1,4 +1,6 @@
-import icedCoffeeImg from "@/assets/images/iced-coffee.png";
+import icedCoffeeImg from "@/assets/images/iced-coffee1.png";
+import formantLogo from "@/assets/images/format.png"; // <= logo Formant
+
 import { Link } from "expo-router";
 import {
   ImageBackground,
@@ -6,6 +8,7 @@ import {
   StyleSheet,
   Text,
   View,
+  Image, // <= jangan lupa import Image
 } from "react-native";
 
 const App = () => {
@@ -18,9 +21,16 @@ const App = () => {
       >
         {/* Overlay gelap supaya teks lebih jelas */}
         <View style={styles.overlay}>
-          <Text style={styles.title}>Kedai kopi</Text>
+          {/* LOGO DI ATAS TULISAN COFFEE SHOP */}
+          <Image
+            source={formantLogo}
+            style={styles.logo}
+            resizeMode="contain"
+          />
+
+          <Text style={styles.title}>Coffee Shop</Text>
           <Text style={styles.subtitle}>
-            Hadir disetiap hari untuk kalian pecinta kopi
+            daily coffee for those of you who are feeling stuffy
           </Text>
 
           {/* Kumpulan tombol navigasi */}
@@ -33,23 +43,16 @@ const App = () => {
               </Pressable>
             </Link>
 
-
-            {/* <Link href={"/specials"} asChild>
-              <Pressable style={[styles.button, styles.secondaryButton]}>
-                <Text style={styles.buttonText}>Spesial buat kamu</Text>
-              </Pressable> */}
-            {/* </Link> */}
-
             <Link href={"/about"} asChild>
               <Pressable style={[styles.button, styles.secondaryButton]}>
-                <Text style={styles.buttonText}>Tentang kami</Text>
+                <Text style={styles.buttonText}>Contact us</Text>
               </Pressable>
             </Link>
 
             <Link href={"/contact"} asChild>
               <Pressable style={[styles.button, styles.outlineButton]}>
                 <Text style={[styles.buttonText, styles.outlineButtonText]}>
-                  Kontak kami
+                  About Us
                 </Text>
               </Pressable>
             </Link>
@@ -81,6 +84,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
 
+  // STYLE LOGO FORMANT
+  logo: {
+    width: 120,
+    height: 120,
+    marginBottom: 16,
+  },
+
   title: {
     color: "white",
     fontSize: 44,
@@ -103,7 +113,7 @@ const styles = StyleSheet.create({
   buttonGroup: {
     width: "100%",
     alignItems: "center",
-    gap: 14, 
+    gap: 14,
   },
 
   button: {
@@ -120,6 +130,7 @@ const styles = StyleSheet.create({
   },
 
   primaryButtonText: {
+    // biar kebaca di atas background putih, pakai warna gelap
     color: "#ffffffff",
   },
 

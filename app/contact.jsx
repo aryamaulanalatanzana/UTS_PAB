@@ -14,7 +14,7 @@ export default function ContactScreen() {
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
         <View style={styles.card}>
-          <Text style={styles.title}>Kedai kopi</Text>
+          <Text style={styles.title}>Coffee Shop</Text>
 
           {/* Address */}
           <View style={styles.sectionRow}>

@@ -13,7 +13,7 @@ export default function MenuScreen() {
   const seperatorComponent = <View style={styles.separator} />;
   // const headerComponent = <Text>Top Of List</Text>;
   const footerComponent = (
-    <Text style={{ color: theme.text }}>End Of Menus</Text>
+    <Text style={{ color: theme.text }}>choose your menu</Text>
   );
 
   return (
@@ -111,7 +111,7 @@ function createStyles(theme, colorScheme) {
     menuImage: {
       width: 90,
       height: 90,
-      borderRadius: 20, // supaya gambar ikut rounded
+      borderRadius: 20, 
     },
   });
 }
