@@ -1,5 +1,5 @@
 import { Colors } from "@/constants/Colors";
-import {Appearance,FlatList, Image,Platform,SafeAreaView,ScrollView,StyleSheet,Text,View,} from "react-native";
+import { Appearance, FlatList, Image, Platform, SafeAreaView, ScrollView, StyleSheet, Text, View, } from "react-native";
 
 import MENU_IMAGES from "@/constants/MenuImages";
 import { MENU_ITEMS } from "@/constants/MenuItems";
