@@ -13,7 +13,7 @@ export default function MenuScreen() {
   const seperatorComponent = <View style={styles.separator} />;
   // const headerComponent = <Text>Top Of List</Text>;
   const footerComponent = (
-    <Text style={{ color: theme.text }}>End Of Menu</Text>
+    <Text style={{ color: theme.text }}>End Of Menus</Text>
   );
 
   return (
